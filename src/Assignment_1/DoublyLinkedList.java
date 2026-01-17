@@ -1,15 +1,18 @@
-package Arrays;
 
-class DNode {
-    int data;
-    DNode prev, next;
-    DNode(int data) { this.data = data; this.prev = null; this.next = null; }
-}
+package Assignment_1;
 
 public class DoublyLinkedList {
+
+    // عقدة القائمة الثنائية
+    static class DNode {
+        int data;
+        DNode prev, next;
+        DNode(int data) { this.data = data; this.prev = null; this.next = null; }
+    }
+
     private DNode head, tail;
 
-    // السؤال 11: إزالة التكرارات
+    // سؤال 11: إزالة التكرارات
     public void removeDuplicates() {
         DNode current = head;
         while (current != null) {
@@ -26,10 +29,9 @@ public class DoublyLinkedList {
         }
     }
 
-    // السؤال 12: الاجتياز العكسي
+    // سؤال 12: الاجتياز العكسي وطباعة العناصر
     public void traverseReverse() {
         DNode current = tail;
-        System.out.print("Reverse: ");
         while (current != null) {
             System.out.print(current.data + " ");
             current = current.prev;
@@ -37,7 +39,7 @@ public class DoublyLinkedList {
         System.out.println();
     }
 
-    // السؤال 13: البحث
+    // سؤال 13: البحث عن عنصر
     public DNode search(int value) {
         DNode current = head;
         while (current != null) {
@@ -45,24 +47,5 @@ public class DoublyLinkedList {
             current = current.next;
         }
         return null;
-    }
-
-    // طرق مساعدة
-    public void append(int data) {
-        DNode newNode = new DNode(data);
-        if (head == null) { head = tail = newNode; return; }
-        tail.next = newNode;
-        newNode.prev = tail;
-        tail = newNode;
-    }
-
-    public void display() {
-        DNode current = head;
-        System.out.print("Doubly List: ");
-        while (current != null) {
-            System.out.print(current.data + " ");
-            current = current.next;
-        }
-        System.out.println();
     }
 }
