@@ -19,7 +19,7 @@ public class Main {
         //  numbers[2]=7;
         //int []numbers=new int[7];
 
-        //
+
         //arr.delete(numbers,2);
 ///arr.shiftLeft_Delete(numbers,2);
         // arr.input(numbers);

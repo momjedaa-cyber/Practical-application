@@ -77,7 +77,7 @@ public class Arrayss {
         int findex=0;
         int lindex=a.length-1;
         while (findex<=lindex){
-            int mid=(findex+lindex)/2; //5
+            int mid=(findex+lindex)/2;
             if(svalue==a[mid])
                 return mid;
             if(svalue>a[mid])
